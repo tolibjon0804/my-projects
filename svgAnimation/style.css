@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(
+    45deg,
+    rgba(23, 133, 100, 1),
+    rgba(21, 13, 100, 1),
+    rgba(233, 13, 100, 1)
+  );
+}
+.title {
+  width: 600px;
+  text-align: center;
+  color: whitesmoke;
+}
+.title h1 {
+  font-size: 70px;
+  line-height: 150px;
+}
+.title p {
+  font-size: 25px;
+  word-spacing: 8px;
+  line-height: 50px;
+}
+.title a {
+  text-decoration: none;
+  color: black;
+}
+svg {
+  width: 600px;
+  font-family: sans-serif;
+}
+#input{
+  margin-top: 50px;
+}
+
+#right-wheel,
+#left-wheel {
+  animation: roll 2s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#bike {
+  animation: bike 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+#hat {
+  animation: hat 1s ease-in-out infinite alternate;
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+@keyframes hat {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(40%);
+  }
+}
+
+@keyframes roll {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes bike {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
